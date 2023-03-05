@@ -18,4 +18,17 @@ void main() {
   num numDouble2Int = numDouble.toInt();
   print("toInt:"+numDouble2Int.toString());
 
+  // 2. 字符串
+  String name = "hackingangle";
+  String greetings = 'Hi,';
+  // 2.1 单引号拼接
+  print('$greetings $name');
+  // 2.2 双引号拼接
+  print("$greetings $name");
+  // 2.3 +拼接
+  print(greetings + " " + name);
+  // 2.4 常用方法
+  String name1 = name.substring(0, 1);
+  print(name1);
+
 }
