@@ -33,4 +33,13 @@ void main() {
   int namePartIndex= name.indexOf("ac");
   print(namePartIndex);
 
+  // 3. 布尔类型
+  bool success = true;
+  bool fail = false;
+  print(success && fail);
+  print(success || fail);
+  if (success) {
+    print("yes");
+  }
+
 }
