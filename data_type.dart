@@ -30,5 +30,7 @@ void main() {
   // 2.4 常用方法
   String name1 = name.substring(0, 1);
   print(name1);
+  int namePartIndex= name.indexOf("ac");
+  print(namePartIndex);
 
 }
