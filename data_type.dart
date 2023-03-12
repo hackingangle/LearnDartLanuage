@@ -42,4 +42,27 @@ void main() {
     print("yes");
   }
 
+  // 4. 集合类型， 泛型
+  List list = [1, null, 2, 'Hello World.'];
+  printLine(list);
+  List list2 = [];
+  list2.add("value");
+  list2.add(1);
+  printLine(list2);
+  list2.addAll(list);
+  printLine(list2);
+  for (var item  in list2) {
+    print("for in item: $item");
+  }
+
+}
+void printLine(var msg) {
+  print("==========");
+  // is 判断类型
+  if (msg is List) {
+    msg.forEach((element) { print(element);});
+  } else {
+    print(msg);
+  }
+  print("==========");
 }
