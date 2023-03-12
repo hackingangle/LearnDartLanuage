@@ -55,14 +55,30 @@ void main() {
     print("for in item: $item");
   }
 
+  printLine("map");
+
+  // 5. HashMap
+  Map names = {1:"a", 2:"b"};
+  var names2 = {};
+  names2["group1"] = "a";
+  names2["group2"] = "b";
+  names.forEach((key, value) { print("forEach map key: $key value: $value");});
+  names2.forEach((key, value) { print("forEach map key: $key value: $value");});
+  var namesAfter = names.map((key, value) => MapEntry(value, key));
+  namesAfter.forEach((key, value) { print("forEach map after key: $key value: $value");});
+
+  final map = {'a': 1, 'b': 2, 'c': 3};
+  final newMap = map.map((key, value) => MapEntry(value, key));
+  print(newMap); // 输出：{1: a, 2: b, 3: c}
+
 }
 void printLine(var msg) {
-  print("==========");
+  print("===========");
   // is 判断类型
   if (msg is List) {
     msg.forEach((element) { print(element);});
   } else {
     print(msg);
   }
-  print("==========");
+  print("===========");
 }
